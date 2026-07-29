@@ -44,11 +44,11 @@
 #define ICM20602_CS_PIN         PC2
 #define ICM20602_SPI_BUS        BUS_SPI1
 
-#define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW180_DEG
+//#define USE_IMU_MPU6500
+//#define IMU_MPU6500_ALIGN       CW180_DEG
 
-#define USE_IMU_MPU6000
-#define IMU_MPU6000_ALIGN       CW270_DEG
+//#define USE_IMU_MPU6000
+//#define IMU_MPU6000_ALIGN       CW270_DEG
 
 #define USE_IMU_ICM20602
 #define IMU_ICM20602_ALIGN      CW0_DEG
