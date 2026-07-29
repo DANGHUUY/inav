@@ -32,8 +32,8 @@
 #define USE_SPI_DEVICE_1
 
 #define SPI1_SCK_PIN            PA5
-#define SPI1_MISO_PIN   	    PA6
-#define SPI1_MOSI_PIN   	    PA7
+#define SPI1_MISO_PIN           PA6
+#define SPI1_MOSI_PIN           PA7
 
 #define MPU6500_CS_PIN          PC2
 #define MPU6500_SPI_BUS         BUS_SPI1
@@ -41,11 +41,17 @@
 #define MPU6000_CS_PIN          PC2
 #define MPU6000_SPI_BUS         BUS_SPI1
 
+#define ICM20602_CS_PIN         PC2
+#define ICM20602_SPI_BUS        BUS_SPI1
+
 #define USE_IMU_MPU6500
 #define IMU_MPU6500_ALIGN       CW180_DEG
 
 #define USE_IMU_MPU6000
 #define IMU_MPU6000_ALIGN       CW270_DEG
+
+#define USE_IMU_ICM20602
+#define IMU_ICM20602_ALIGN      CW0_DEG
 
 // *************** SPI3 ********************
 #define USE_SPI_DEVICE_3
