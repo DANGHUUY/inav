@@ -1,0 +1,33 @@
+name: Build Single Target Fast
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_name:
+        description: 'Tên Target cần build'
+        required: true
+        default: 'MATEKF405'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Install Toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi
+
+      - name: Build HEX
+        run: |
+          make TARGET=${{ github.event.inputs.target_name }}
+
+      - name: Upload HEX Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.target_name }}-HEX
+          path: build/*.hex
