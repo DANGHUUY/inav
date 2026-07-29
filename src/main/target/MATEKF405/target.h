@@ -21,12 +21,15 @@
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
 
-#define ICM20602_CS_PIN         PC2
-#define ICM20602_SPI_BUS        BUS_SPI1
-
+// --- Cấu hình chuẩn tên Macro cho INAV ---
 #define USE_IMU_ICM20602
 #define IMU_ICM20602_ALIGN      CW0_DEG
 
+#define GYRO_1_CS_PIN           PC2
+#define GYRO_1_SPI_BUS          BUS_SPI1
+
+#define ACC_1_CS_PIN            PC2
+#define ACC_1_SPI_BUS           BUS_SPI1
 // *************** UART Config *****************************
 #define USE_VCP
 //#define VBUS_SENSING_PIN        PB12
