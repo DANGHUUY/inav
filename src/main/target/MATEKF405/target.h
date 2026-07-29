@@ -21,6 +21,10 @@
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
 
+// --- CẦN BẬT BẮT BUỘC 2 DÒNG NÀY ---
+#define USE_GYRO
+#define USE_ACC
+
 // --- BẬT DRIVER CHUẨN INAV CHO ICM20602 ---
 #define USE_GYRO_SPI_ICM20602
 #define GYRO_1_CS_PIN           PC2
@@ -72,6 +76,7 @@
 
 #define USE_MAG
 #define MAG_I2C_BUS             DEFAULT_I2C_BUS
+#define USE_MAG_QMC5883
 #define USE_MAG_ALL
 
 #define USE_RANGEFINDER
