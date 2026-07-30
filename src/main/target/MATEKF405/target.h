@@ -20,6 +20,7 @@
 #define SPI1_SCK_PIN            PA5
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
+#define SPI1_NSS_PIN            PA4
 
 // --- DRIVER CHUẨN INAV CHO ICM20602 ---
 #define USE_GYRO_SPI_ICM20602
