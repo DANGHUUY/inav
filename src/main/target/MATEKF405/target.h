@@ -22,13 +22,15 @@
 #define SPI1_MOSI_PIN           PA7
 #define SPI1_NSS_PIN            PA4
 
-// --- DRIVER CHUẨN INAV CHO ICM20602 ---
-#define USE_GYRO_SPI_ICM20602
+// --- BẬT CỜ BỘ TRÌNH ĐIỀU KHIỂN IMU MPU6500 / ICM20602 ---
+#define USE_IMU_MPU6500         // <-- ĐÂY CHÍNH LÀ "MẮT XÍCH" MỞ KHÓA FILE accgyro_mpu6500.c
+
+#define USE_GYRO_SPI_MPU6500
 #define GYRO_1_CS_PIN           PA4
 #define GYRO_1_SPI_BUS          BUS_SPI1
 #define GYRO_1_ALIGN            CW0_DEG
 
-#define USE_ACC_SPI_ICM20602
+#define USE_ACC_SPI_MPU6500
 #define ACC_1_CS_PIN            PA4
 #define ACC_1_SPI_BUS           BUS_SPI1
 #define ACC_1_ALIGN             CW0_DEG
