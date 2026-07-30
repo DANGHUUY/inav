@@ -28,6 +28,7 @@
 #define BEEPER_INVERTED
 
 // *************** Gyro & ACC **********************
+#define USE_SPI
 #define USE_I2C
 #define USE_I2C_DEVICE_1
 
