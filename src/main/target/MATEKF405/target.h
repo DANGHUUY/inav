@@ -21,13 +21,13 @@
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
 
-// --- BẬT DRIVER MPU6500 (ĐỔI TỪ ICM20602 SANG MPU6500 ĐỂ INAV NHẬN) ---
-#define USE_GYRO_SPI_MPU6500
+// --- DRIVER CHUẨN INAV CHO ICM20602 ---
+#define USE_GYRO_SPI_ICM20602
 #define GYRO_1_CS_PIN           PA4
 #define GYRO_1_SPI_BUS          BUS_SPI1
 #define GYRO_1_ALIGN            CW0_DEG
 
-#define USE_ACC_SPI_MPU6500
+#define USE_ACC_SPI_ICM20602
 #define ACC_1_CS_PIN            PA4
 #define ACC_1_SPI_BUS           BUS_SPI1
 #define ACC_1_ALIGN             CW0_DEG
