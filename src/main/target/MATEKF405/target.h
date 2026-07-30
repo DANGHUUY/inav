@@ -22,15 +22,14 @@
 #define SPI1_MOSI_PIN           PA7
 
 // --- BẬT DRIVER CHUẨN INAV CHO ICM20602 ---
-#define USE_GYRO
+
 #define USE_GYRO_SPI_ICM20602
-#define GYRO_1_CS_PIN           PC2
+#define GYRO_1_CS_PIN           PA4
 #define GYRO_1_SPI_BUS          BUS_SPI1
 #define GYRO_1_ALIGN            CW0_DEG
 
-#define USE_ACC
 #define USE_ACC_SPI_ICM20602
-#define ACC_1_CS_PIN            PC2
+#define ACC_1_CS_PIN            PA4
 #define ACC_1_SPI_BUS           BUS_SPI1
 #define ACC_1_ALIGN             CW0_DEG
 // *************** UART Config *****************************
