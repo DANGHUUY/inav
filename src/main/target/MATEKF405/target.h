@@ -26,7 +26,6 @@
 
 #define BEEPER                  PC13
 #define BEEPER_INVERTED
-
 // *************** Gyro & ACC **********************
 #define USE_SPI
 #define USE_SPI_DEVICE_1
@@ -37,24 +36,17 @@
 
 #define MPU6500_CS_PIN          PC2
 #define MPU6500_SPI_BUS         BUS_SPI1
+#define USE_IMU_MPU6500
+#define IMU_MPU6500_ALIGN       CW180_DEG
 
 #define MPU6000_CS_PIN          PC2
 #define MPU6000_SPI_BUS         BUS_SPI1
+#define USE_IMU_MPU6000
+#define IMU_MPU6000_ALIGN       CW270_DEG
 
 #define ICM20602_CS_PIN         PC2
 #define ICM20602_SPI_BUS        BUS_SPI1
 
-// GIỮ NGUYÊN dòng này - driver MPU6500 cũng detect được ICM20602!
-#define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW180_DEG
-
-// Thêm cái này NẾU có define trong INAV
-// #define USE_GYRO_SPI_ICM20602
-#define IMU_ICM20602_ALIGN       CW0_DEG
-
-// Giữ cả MPU6000 cho chắc
-#define USE_IMU_MPU6000
-#define IMU_MPU6000_ALIGN       CW270_DEG
 
 
 // *************** SPI3 ********************
