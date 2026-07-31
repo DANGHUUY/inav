@@ -27,9 +27,9 @@
 #define GYRO_1_SPI_BUS          BUS_SPI1
 
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW90_DEG
-#define GYRO_1_ALIGN            CW90_DEG
-#define ACC_1_ALIGN             CW90_DEG
+#define IMU_MPU6500_ALIGN       CW270_FLIP
+#define GYRO_1_ALIGN            CW270_FLIP
+#define ACC_1_ALIGN             CW270_FLIP
 
 // UART Ports
 #define USE_VCP
