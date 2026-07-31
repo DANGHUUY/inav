@@ -1,7 +1,7 @@
 #pragma once
 
 #define TARGET_BOARD_IDENTIFIER "MKF4"
-#define USBD_PRODUCT_STRING     "MatekF4_DIY"
+#define USBD_PRODUCT_STRING     "MATEK_Y_TEST"
 
 // Status LED
 #define LED0                    PB9
