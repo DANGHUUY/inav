@@ -31,9 +31,9 @@
 
 // Khai báo Driver & Alignment CW90_DEG
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW90_FLIP
-#define GYRO_1_ALIGN            CW90_FLIP
-#define ACC_1_ALIGN             CW90_FLIP
+#define IMU_MPU6500_ALIGN       CW90_DEG_FLIP
+#define GYRO_1_ALIGN            CW90_DEG_FLIP
+#define ACC_1_ALIGN             CW90_DEG_FLIP
 
 // UART Ports
 #define USE_VCP
