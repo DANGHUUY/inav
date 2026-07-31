@@ -3,13 +3,15 @@
 #include "drivers/timer.h"
 #include "drivers/io.h"
 
-// 1. Đăng ký 1 Gyro/ACC trên SPI1 (CS = PC2)
+// 1. Đăng ký duy nhất 1 Gyro/ACC trên SPI1 - ĐỦ ĐÚNG 7 THAM SỐ
 BUSDEV_REGISTER_SPI(
-    BUS_SPI1,
-    DEVHW_MPU6500,
-    SPI1_DEV,
-    GYRO_1_CS_PIN,
-    OWNER_MPU
+    BUS_SPI1,         // _name
+    DEVHW_MPU6500,    // _devHw
+    SPI1_DEV,         // _spiBus
+    GYRO_1_CS_PIN,    // _csnPin
+    IO_NONE,          // _irqPin
+    0,                // _flags
+    0                 // _param
 );
 
 // 2. Cấu hình Timer cho 4 cổng Motor ESC trên TIM3 (PC6 - PC9)
