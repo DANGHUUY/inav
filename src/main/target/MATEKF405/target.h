@@ -1,7 +1,7 @@
 #pragma once
 
 #define TARGET_BOARD_IDENTIFIER "MKF4"
-#define USBD_PRODUCT_STRING     "MATEK_Y_TEST"
+#define USBD_PRODUCT_STRING     "MatekF4_DIY"
 
 // Status LED
 #define LED0                    PB9
@@ -31,9 +31,9 @@
 
 // Khai báo Driver & Alignment CW90_DEG
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW90_DEG
-#define GYRO_1_ALIGN            CW90_DEG
-#define ACC_1_ALIGN             CW90_DEG
+#define IMU_MPU6500_ALIGN       CW90_FLIP
+#define GYRO_1_ALIGN            CW90_FLIP
+#define ACC_1_ALIGN             CW90_FLIP
 
 // UART Ports
 #define USE_VCP
