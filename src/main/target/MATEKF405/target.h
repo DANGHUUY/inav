@@ -15,7 +15,7 @@
 #define VBAT_ADC_PIN            PC1
 #define CURRENT_METER_ADC_PIN   PC0
 
-// Gyro & ACC (ICM20602 / MPU6500)
+// *************** Gyro & ACC (Đầy đủ Macro cho Driver & BUSDEV) **********************
 #define USE_SPI
 #define USE_SPI_DEVICE_1
 
@@ -23,13 +23,17 @@
 #define SPI1_MISO_PIN           PA6
 #define SPI1_MOSI_PIN           PA7
 
+// Khai báo Pin CS cho cả Driver MPU6500 và BUSDEV trong target.c
+#define MPU6500_CS_PIN          PC2
 #define GYRO_1_CS_PIN           PC2
+#define MPU6500_SPI_BUS         BUS_SPI1
 #define GYRO_1_SPI_BUS          BUS_SPI1
 
+// Khai báo Driver & Alignment CW90_DEG
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW0_DEG
-#define GYRO_1_ALIGN            CW0_DEG
-#define ACC_1_ALIGN             CW0_DEG
+#define IMU_MPU6500_ALIGN       CW90_DEG
+#define GYRO_1_ALIGN            CW90_DEG
+#define ACC_1_ALIGN             CW90_DEG
 
 // UART Ports
 #define USE_VCP
