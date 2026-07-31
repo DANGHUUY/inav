@@ -1,3 +1,3 @@
-target_sources(${TARGET_NAME} PRIVATE
+target_sources(inav_${TARGET} PRIVATE
     target.c
 )
