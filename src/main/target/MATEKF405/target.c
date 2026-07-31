@@ -3,13 +3,13 @@
 #include "drivers/timer.h"
 #include "drivers/io.h"
 
-// 1. Đăng ký duy nhất 1 Gyro/ACC trên SPI1 - ĐỦ ĐÚNG 7 THAM SỐ
+// 1. Đăng ký duy nhất 1 Gyro/ACC trên SPI1 (CS = PC2, irq = NONE)
 BUSDEV_REGISTER_SPI(
     BUS_SPI1,         // _name
     DEVHW_MPU6500,    // _devHw
     SPI1_DEV,         // _spiBus
     GYRO_1_CS_PIN,    // _csnPin
-    IO_NONE,          // _irqPin
+    NONE,             // _irqPin (Gốc IO_TAG nối thành DEFIO_TAG__NONE = 0)
     0,                // _flags
     0                 // _param
 );
