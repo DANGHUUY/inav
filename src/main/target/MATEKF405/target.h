@@ -7,6 +7,14 @@
 #define LED0                    PB9
 #define LED0_PIN                PB9
 
+// ADC & Battery Voltage Meter (Bắt buộc để Linker khớp hàm checkBatteryVoltageState)
+#define USE_ADC
+#define ADC_INSTANCE            ADC1
+#define ADC1_DMA_STREAM         DMA2_Stream0
+#define USE_VOLTAGE_METER
+#define VBAT_ADC_PIN            PC1
+#define CURRENT_METER_ADC_PIN   PC0
+
 // Gyro & ACC (ICM20602 / MPU6500)
 #define USE_SPI
 #define USE_SPI_DEVICE_1
