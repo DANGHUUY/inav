@@ -1,15 +1,16 @@
 #include "platform.h"
 #include "drivers/bus.h"
+#include "drivers/bus_spi.h"
 #include "drivers/timer.h"
 #include "drivers/io.h"
 
-// 1. Đăng ký duy nhất 1 Gyro/ACC trên SPI1 (CS = PC2, irq = NONE)
+// 1. Đăng ký duy nhất 1 Gyro/ACC trên SPI1 - Dùng chuẩn enum SPIDEV_1
 BUSDEV_REGISTER_SPI(
     BUS_SPI1,         // _name
     DEVHW_MPU6500,    // _devHw
-    SPI1_DEV,         // _spiBus
+    SPIDEV_1,         // _spiBus (Sửa SPI1_DEV -> SPIDEV_1)
     GYRO_1_CS_PIN,    // _csnPin
-    NONE,             // _irqPin (Gốc IO_TAG nối thành DEFIO_TAG__NONE = 0)
+    NONE,             // _irqPin
     0,                // _flags
     0                 // _param
 );
