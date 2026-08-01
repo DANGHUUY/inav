@@ -337,12 +337,18 @@ bool compassInit(void)
         };
         rotationMatrixFromAngles(&mag.dev.magAlign.externalRotation, &compassAngles);
     } else {
-        mag.dev.magAlign.useExternal = false;
-        if (compassConfig()->mag_align != ALIGN_DEFAULT) {
-            mag.dev.magAlign.onBoard = compassConfig()->mag_align;
-        } else {
-            mag.dev.magAlign.onBoard = CW270_DEG_FLIP;  // The most popular default is 270FLIP for external mags
-        }
+       		 mag.dev.magAlign.useExternal = false;
+    	if (compassConfig()->mag_align != ALIGN_DEFAULT) {
+  			  mag.dev.magAlign.onBoard = compassConfig()->mag_align;
+		} else {
+		#if defined(DEFAULT_ALIGN_MAG)
+  		  mag.dev.magAlign.onBoard = DEFAULT_ALIGN_MAG;
+		#elif defined(MAG_1_ALIGN)
+ 	 	  mag.dev.magAlign.onBoard = MAG_1_ALIGN;
+		#else
+			mag.dev.magAlign.onBoard = CW270_DEG_FLIP;  // Giá trị fallback gốc của INAV
+	#endif
+		}
     }
 
     return ret;
