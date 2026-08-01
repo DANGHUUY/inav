@@ -35,8 +35,7 @@
 #define GYRO_1_ALIGN            CW270_DEG_FLIP
 #define ACC_1_ALIGN             CW270_DEG_FLIP
 
-// UART Ports
-#define USE_VCP
+// *************** UART *****************************
 #define USE_UART1
 #define UART1_RX_PIN            PA10
 #define UART1_TX_PIN            PA9
@@ -46,6 +45,13 @@
 #define UART2_TX_PIN            PA2
 
 #define SERIAL_PORT_COUNT       3
+// *************** I2C ****************************
+#define USE_I2C
+#define USE_I2C_DEVICE_1
+#define I2C1_SCL                PB6
+#define I2C1_SDA                PB7
+
+#define DEFAULT_I2C_BUS         BUS_I2C1
 
 // Motor ESC Outputs
 #define MAX_PWM_OUTPUT_PORTS    4
@@ -53,6 +59,26 @@
 #define MOTOR2_PIN              PC7
 #define MOTOR3_PIN              PC8
 #define MOTOR4_PIN              PC9
+
+#define USE_BARO
+#define BARO_I2C_BUS                DEFAULT_I2C_BUS
+#define USE_BARO_BMP280
+#define USE_BARO_MS5611
+#define USE_BARO_BMP085
+#define USE_BARO_DPS310
+#define USE_BARO_SPL06
+
+#define USE_MAG
+#define MAG_I2C_BUS                 DEFAULT_I2C_BUS
+#define USE_MAG_ALL
+
+#define TEMPERATURE_I2C_BUS         DEFAULT_I2C_BUS
+
+#define USE_RANGEFINDER
+#define USE_RANGEFINDER_MSP
+#define RANGEFINDER_I2C_BUS     DEFAULT_I2C_BUS
+
+#define PITOT_I2C_BUS               DEFAULT_I2C_BUS
 
 // GPIO Port Masks
 #define TARGET_IO_PORTA         0xffff
