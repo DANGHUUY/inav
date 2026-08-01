@@ -36,6 +36,8 @@
 #define ACC_1_ALIGN             CW270_DEG_FLIP
 
 // *************** UART *****************************
+#define USE_VCP
+
 #define USE_UART1
 #define UART1_RX_PIN            PA10
 #define UART1_TX_PIN            PA9
@@ -50,16 +52,15 @@
 #define USE_I2C_DEVICE_1
 #define I2C1_SCL                PB6
 #define I2C1_SDA                PB7
-
 #define DEFAULT_I2C_BUS         BUS_I2C1
 
-// Motor ESC Outputs
+// *************** Motor ESC Outputs *****************
 #define MAX_PWM_OUTPUT_PORTS    4
 #define MOTOR1_PIN              PC6
 #define MOTOR2_PIN              PC7
 #define MOTOR3_PIN              PC8
 #define MOTOR4_PIN              PC9
-
+// *************** BAROMETER (BMP280 & Others) *****************
 #define USE_BARO
 #define BARO_I2C_BUS                DEFAULT_I2C_BUS
 #define USE_BARO_BMP280
@@ -67,18 +68,23 @@
 #define USE_BARO_BMP085
 #define USE_BARO_DPS310
 #define USE_BARO_SPL06
-
+// *************** MAGNETOMETER / COMPASS (QMC5885P) ************
 #define USE_MAG
 #define MAG_I2C_BUS                 DEFAULT_I2C_BUS
 #define USE_MAG_ALL
 
-#define TEMPERATURE_I2C_BUS         DEFAULT_I2C_BUS
-
+// *************** RANGEFINDER (VL53L0X / VL53L1X ToF) **********
 #define USE_RANGEFINDER
-#define USE_RANGEFINDER_MSP
 #define RANGEFINDER_I2C_BUS     DEFAULT_I2C_BUS
+#define USE_RANGEFINDER_VL53L0X // Sửa từ MSP sang VL53L0X để đọc I2C trực tiếp
 
-#define PITOT_I2C_BUS               DEFAULT_I2C_BUS
+// *************** GPS (M10 - UBX Protocol) **********************
+#define USE_GPS                 // Bật tính năng định vị GPS
+#define USE_GPS_UBLOX           // Driver dành cho dòng chip u-blox M10
+
+#define TEMPERATURE_I2C_BUS     DEFAULT_I2C_BUS
+#define PITOT_I2C_BUS           DEFAULT_I2C_BUS
+
 
 // GPIO Port Masks
 #define TARGET_IO_PORTA         0xffff
