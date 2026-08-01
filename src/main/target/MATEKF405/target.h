@@ -73,8 +73,8 @@
 #define MAG_I2C_BUS                 DEFAULT_I2C_BUS
 #define USE_MAG_ALL
 
-#define DEFAULT_ALIGN_MAG           CW180_DEG
-#define MAG_1_ALIGN                 CW180_DEG
+#define DEFAULT_ALIGN_MAG           CW0_DEG
+#define MAG_1_ALIGN                 CW0_DEG
 // *************** RANGEFINDER (VL53L0X / VL53L1X ToF) **********
 #define USE_RANGEFINDER
 #define RANGEFINDER_I2C_BUS     DEFAULT_I2C_BUS
