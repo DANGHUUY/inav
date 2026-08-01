@@ -68,7 +68,13 @@ mag_t mag;                   // mag access functions
 PG_REGISTER_WITH_RESET_TEMPLATE(compassConfig_t, compassConfig, PG_COMPASS_CONFIG, 6);
 
 PG_RESET_TEMPLATE(compassConfig_t, compassConfig,
+#if defined(DEFAULT_ALIGN_MAG)
+    .mag_align = DEFAULT_ALIGN_MAG,
+#elif defined(MAG_1_ALIGN)
+    .mag_align = MAG_1_ALIGN,
+#else
     .mag_align = SETTING_ALIGN_MAG_DEFAULT,
+#endif
     .mag_hardware = SETTING_MAG_HARDWARE_DEFAULT,
     .mag_declination = SETTING_MAG_DECLINATION_DEFAULT,
 #ifdef USE_DUAL_MAG
@@ -346,7 +352,7 @@ bool compassInit(void)
 		#elif defined(MAG_1_ALIGN)
  	 	  mag.dev.magAlign.onBoard = MAG_1_ALIGN;
 		#else
-			mag.dev.magAlign.onBoard = CW270_DEG_FLIP;  // Giá trị fallback gốc của INAV
+			mag.dev.magAlign.onBoard = CW270_DEG_FLIP;   Giá trị fallback gốc của INAV
 	#endif
 		}
     }
