@@ -5,6 +5,10 @@
 #include "drivers/timer.h"
 #include "drivers/io.h"
 
+#include <stdbool.h>
+#include "drivers/io.h"
+#include "drivers/pwm_mapping.h"
+
 // Đăng ký Gyro/ACC trên SPI1 - Truyền GYRO_1_ALIGN từ target.h vào _param
 BUSDEV_REGISTER_SPI(
     BUS_SPI1,         // _name
