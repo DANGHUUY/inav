@@ -352,7 +352,7 @@ bool compassInit(void)
 		#elif defined(MAG_1_ALIGN)
  	 	  mag.dev.magAlign.onBoard = MAG_1_ALIGN;
 		#else
-			mag.dev.magAlign.onBoard = CW270_DEG_FLIP;   Giá trị fallback gốc của INAV
+			mag.dev.magAlign.onBoard = CW270_DEG_FLIP;  // Giá trị fallback gốc của INAV
 	#endif
 		}
     }
