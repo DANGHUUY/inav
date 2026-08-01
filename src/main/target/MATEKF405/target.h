@@ -74,7 +74,6 @@
 #define USE_MAG_ALL
 
 #define DEFAULT_ALIGN_MAG           CW180_DEG
-#define DEFAULT_ALIGN_MAG           CW180_DEG
 #define MAG_1_ALIGN                 CW180_DEG
 // *************** RANGEFINDER (VL53L0X / VL53L1X ToF) **********
 #define USE_RANGEFINDER
